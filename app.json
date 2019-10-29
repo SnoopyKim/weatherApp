@@ -25,6 +25,8 @@
     ],
     "ios": {
       "supportsTablet": true
-    }
+    },
+    "description": "You can check the course on https://academy.nomadcoders.co/p/fucking-react-native-apps",
+    "githubUrl": "https://github.com/SnoopyKim/weatherApp"
   }
 }
