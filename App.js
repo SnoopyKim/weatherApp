@@ -11,6 +11,7 @@ export default class extends React.Component {
   state = {
     isLoading: true
   };
+
   getWeather = async(latitude, longitude) => {
     const { 
       data: {
@@ -25,6 +26,7 @@ export default class extends React.Component {
       temp 
     });
   }
+
   getLocation = async() => {
     try {
       await Location.requestPermissionsAsync();
@@ -35,9 +37,11 @@ export default class extends React.Component {
       Alert.alert("Can't find you.", "So sad");
     }
   };
+
   componentDidMount() {
     this.getLocation();
   }
+  
   render() {
     const { isLoading, condition, temp } = this.state;
     return isLoading ? <Loading /> : <Weather temp={Math.round(temp)} condition={condition}/>;
